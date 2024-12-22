@@ -1,0 +1,65 @@
+.project-table-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-table-heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.project-table thead {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.project-table th, .project-table td {
+  padding: 0.8rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.project-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.project-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .project-table-container {
+    padding: 1rem;
+  }
+
+  .project-table th, .project-table td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .project-table-heading {
+    font-size: 1.5rem;
+  }
+}
