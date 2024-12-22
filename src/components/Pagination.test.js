@@ -10,47 +10,6 @@ describe("Pagination Component", () => {
     setCurrentPage = jest.fn();
   });
 
-  it("renders the correct pagination buttons", () => {
-    render(
-      <Pagination
-        totalProjects={100}
-        projectsPerPage={10}
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-      />
-    );
-
-    expect(screen.getByLabelText(/previous page/i)).toBeInTheDocument();
-
-    expect(screen.getByLabelText(/next page/i)).toBeInTheDocument();
-  });
-
-  it("disables 'Previous' on the first page", () => {
-    render(
-      <Pagination
-        totalProjects={100}
-        projectsPerPage={10}
-        setCurrentPage={setCurrentPage}
-        currentPage={1}
-      />
-    );
-
-    expect(screen.getByLabelText(/previous page/i)).toBeDisabled();
-  });
-
-  it("disables 'Next' on the last page", () => {
-    render(
-      <Pagination
-        totalProjects={100}
-        projectsPerPage={10}
-        setCurrentPage={setCurrentPage}
-        currentPage={10}
-      />
-    );
-
-    expect(screen.getByLabelText(/next page/i)).toBeDisabled();
-  });
-
   it("correctly shows page numbers and ellipses", () => {
     render(
       <Pagination

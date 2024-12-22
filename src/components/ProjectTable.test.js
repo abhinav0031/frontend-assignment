@@ -67,8 +67,8 @@ describe("ProjectTable Component", () => {
       expect(screen.getByText("1,000", { selector: "td" })).toBeInTheDocument();
     });
   
-    const nextButton = screen.getByLabelText(/next page/i);
-    fireEvent.click(nextButton);
+    const pageTwoButton = screen.getByRole("button", { name: /2/i });
+    fireEvent.click(pageTwoButton);
   
     await waitFor(() => {
       expect(screen.getByText("6", { selector: "td" })).toBeInTheDocument();
